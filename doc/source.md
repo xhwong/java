@@ -14,13 +14,14 @@
 
     
 + 安装之后，开始下载源码： 
+
 ```
 hg clone http://hg.openjdk.java.net/jdk8/jdk8 
-
 ```
 
-+  cd YourOpenJDK：目录如下所示
-![image](https://user-images.githubusercontent.com/18548200/68683852-7a204f00-05a2-11ea-8ab1-fe46185f84b3.png)
++  cd YourOpenJDK：
+> 目录如下所示
+ + ![image](https://user-images.githubusercontent.com/18548200/68683852-7a204f00-05a2-11ea-8ab1-fe46185f84b3.png)
 
      
 +  开始下载：
