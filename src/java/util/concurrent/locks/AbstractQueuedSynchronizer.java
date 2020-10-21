@@ -1,33 +1,6 @@
 /*
  * ORACLE PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
  *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- *
- */
-
-/*
- *
- *
- *
- *
- *
  * Written by Doug Lea with assistance from members of JCP JSR-166
  * Expert Group and released to the public domain, as explained at
  * http://creativecommons.org/publicdomain/zero/1.0/
@@ -41,7 +14,7 @@ import java.util.Date;
 import sun.misc.Unsafe;
 
 /**
- * Provides a framework for implementing blocking locks and related
+ * Provides a framework for implementing blocking locks（阻塞锁） and related
  * synchronizers (semaphores, events, etc) that rely on
  * first-in-first-out (FIFO) wait queues.  This class is designed to
  * be a useful basis for most kinds of synchronizers that rely on a
