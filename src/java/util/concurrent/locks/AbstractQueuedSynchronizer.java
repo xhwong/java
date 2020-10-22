@@ -276,7 +276,7 @@ public abstract class AbstractQueuedSynchronizer
      *
      * <p>The wait queue is a variant of a "CLH" (Craig, Landin, and
      * Hagersten) lock queue. CLH locks are normally used for
-     * spinlocks.  We instead use them for blocking synchronizers, but
+     * spinlocks(自旋锁).  We instead use them for blocking synchronizers, but
      * use the same basic tactic of holding some of the control
      * information about a thread in the predecessor of its node.  A
      * "status" field in each node keeps track of whether a thread
@@ -323,7 +323,7 @@ public abstract class AbstractQueuedSynchronizer
      * (Or, said differently, the next-links are an optimization
      * so that we don't usually need a backward scan.)
      *
-     * <p>Cancellation introduces some conservatism to the basic
+     * <p>Cancellation introduces some conservatism（保守主义） to the basic
      * algorithms.  Since we must poll for cancellation of other
      * nodes, we can miss noticing whether a cancelled node is
      * ahead or behind us. This is dealt with by always unparking
@@ -353,7 +353,7 @@ public abstract class AbstractQueuedSynchronizer
     static final class Node {
         /** Marker to indicate a node is waiting in shared mode */
         static final Node SHARED = new Node();
-        /** Marker to indicate a node is waiting in exclusive mode */
+        /** Marker to indicate a node is waiting in exclusive（独占模式） mode */
         static final Node EXCLUSIVE = null;
 
         /** waitStatus value to indicate thread has cancelled */
@@ -502,6 +502,7 @@ public abstract class AbstractQueuedSynchronizer
 
     /**
      * The synchronization state.
+     * volatile修饰时，它会保证修改的值会立即被更新到主存，当有其他线程需要读取时，它会去内存中读取新值。
      */
     private volatile int state;
 
